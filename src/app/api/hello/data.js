@@ -16,7 +16,7 @@ for(let i=0;i<1000;i++){
 
         name:maleName[rand(0,maleName.length-1)]+" "+last_Name,
         fathers_name:maleName[rand(0,maleName.length-1)]+" "+last_Name,
-        height:rand(4,7)+(rand(1,11)/10),weight:rand(45,130),bloodGround:bloodGroups[rand(0,bloodGroups.length-1)]
+        height:rand(4,7)+(rand(1,11)/10),weight:rand(45,130),bloodGrounp:bloodGroups[rand(0,bloodGroups.length-1)]
     })
 }
 
