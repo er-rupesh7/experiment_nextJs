@@ -12,12 +12,18 @@ export async function GET() {
   try {
     await mongoose.connect(dbLink);
 
+
+    // const newUser=new User({username:'ashihsh',email:'djjasdj@dsdas.das',pwd:'348sji3423iasd'});
+
+
+    // let res=await newUser.save();
     // Use the model to find all users
+  
     const dbData = await User.find();
 
     console.log(dbData);
 
-    return NextResponse.json({ data: dbData });
+    return NextResponse.json({data: dbData });
   } catch (error) {
     console.error("Error connecting to the database:", error);
     return NextResponse.error({ error: "Internal Server Error" });
