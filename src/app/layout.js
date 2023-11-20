@@ -1,6 +1,8 @@
 
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Link from 'next/link'
+import NextAuthProvider from './NextAuthProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,15 +16,18 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      
-      <body className={inter.className}>
 
-        <p>Header</p>
-        {children}
-        <p>Footer</p>
-        </body>
-    
-   
+      <body className={inter.className}>
+        <NextAuthProvider>
+
+          <p><Link href={'/'}>Home</Link></p>
+          {children}
+          <p>Footer</p>
+          
+        </NextAuthProvider>
+      </body>
+
+
     </html>
   )
 }
